@@ -8,8 +8,8 @@ server.use(express.static("public"))
 // utilizando tamplates engine
 const nunjucks = require("nunjucks")
 nunjucks.configure("src/views", {
-    express: server,
-    noCache: true
+   express: server,
+   noCache: true
 })
 
 
@@ -23,6 +23,12 @@ server.get("/", (req, res) => {
 server.get("/create-point", (req, res) => {
    return res.render("create-point.html")
 })
+
+server.get("/search", (req, res) => {
+   return res.render("search-results.html")
+})
+
+
 
 //ligar o servidor
 server.listen(3000)
