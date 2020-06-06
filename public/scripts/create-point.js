@@ -70,6 +70,7 @@ function hundleSelectedItem(event){
 
     const itemId = itemLi.dataset.id
 
+    // console.log('Item ID: ', itemId)
 
     /* verificar se existe itens selecionnado, se sim
      pegar os itens selecionado */
@@ -96,6 +97,7 @@ function hundleSelectedItem(event){
         selectedItems.push(itemId)
     }
 
+    // console.log('selectedItems: ', selectedItems)
    
     //atualizar o campo escondido
     collectedItems.value = selectedItems

@@ -7,9 +7,8 @@ const db = new sqlite3.Database("./src/database/database.db")
 
 module.exports = db
 
-
 // //utilizar objetos de banco de dados
-// db.serialize(() => {
+db.serialize(() => {
 //     //Criar uma tabela
 //     db.run(`
 //     create table if not exists places (
@@ -38,7 +37,7 @@ module.exports = db
 //  `
 
 //     const values = [
-//         "https://images.unsplash.com/photo-1542739674-b449a8938b59?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
+//         "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSEe5JvT3xJztgz9T7PjxlrRf8AMVX9GqDlW00m0VjJEGlNHgZV&usqp=CAU",
 //         "Colectoria",
 //         "Organizações Tabajara, Barreiro",
 //         "Número: 69",
@@ -56,26 +55,26 @@ module.exports = db
 //         console.log(this)
 //     }
 
-//     db.run(query, values, afterInsertData)
+//   db.run(query, values, afterInsertData)
 
-//     Consultar os dados da tabela
-//     db.all(`SELECT name FROM places`, function (err, rows) {
-//         if (err) {
-//             return console.log(err)
-//         }
+//     //Consultar os dados da tabela
+    // db.all(`SELECT name FROM places`, function (err, rows) {
+    //     if (err) {
+    //         return console.log(err)
+    //     }
 
-//         console.log("Aqui está seus registros: ")
-//         console.log(rows)
-//     })
+    //     console.log("Aqui está seus registros: ")
+    //     console.log(rows)
+    // })
 
 
-//     Deletar um dado na tabela
-//     db.run(`DELETE FROM places where id = ?`, [1], function(){
-//         if (err) {
-//             return console.log(err)
-//         }
+    //Deletar um dado na tabela
+    // db.run(`DELETE FROM places where id = ?`, [11], function(err){
+    //     if (err) {
+    //         return console.log(err)
+    //     }
 
-//         console.log("Registro deletado com sucesso! ")
-//     })
+    //     console.log("Registro deletado com sucesso! ")
+    // })
 
-// }) 
+}) 
