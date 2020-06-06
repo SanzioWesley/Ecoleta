@@ -1,3 +1,3 @@
 # Ecoleta
 
-Aplicativo para cadastrar ponto de coleta de resíduo.
+Aplicacão para cadastrar pontos de coleta de resíduo.
